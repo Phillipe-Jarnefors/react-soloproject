@@ -1,7 +1,18 @@
 import React from "react";
 import Pinpoint from "../../assets/pinpoint.png"
 
-function Card(props: any) {
+type TypeProps = {
+		id: number,
+        title: string,
+        location: string,
+        googleMapsUrl: string,
+        startDate: string,
+        endDate: string,
+        description: string,
+        imageUrl: string
+}
+
+function Card(props: TypeProps) {
 	let upperCase: string = props.location.toUpperCase()
 	return(
 		<main className="cards">
